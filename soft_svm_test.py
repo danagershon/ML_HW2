@@ -15,8 +15,8 @@ class TestSoftSVM(unittest.TestCase):
 
     def setUp(self) -> None:
         # load train annd test sets data from csv files
-        self.train_dataset = pd.read_csv('expected_train_prepared.csv')
-        self.test_dataset = pd.read_csv('expected_test_prepared.csv')
+        self.train_dataset = pd.read_csv('train_prepared.csv')
+        self.test_dataset = pd.read_csv('test_prepared.csv')
         
         # create dataframe for feature pcr_04 and PCR_10 only, to predict the spread label
         self.df_train_pcr_04_09 = self.train_dataset[['PCR_04', 'PCR_09']]
